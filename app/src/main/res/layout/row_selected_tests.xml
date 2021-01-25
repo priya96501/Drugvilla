@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,RtlSymmetry">
+
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/ivPoint"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:src="@drawable/ic_bullet_point"
+            android:tint="@color/color_cccccc"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:src="@drawable/ic_all_labs"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/tvPrice"
+            android:layout_toEndOf="@+id/ivPoint"
+            android:fontFamily="@font/assistant_semibold"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:text="@string/title"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <TextView
+            android:id="@+id/tvBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/ivDelete"
+            android:layout_toEndOf="@+id/ivPoint"
+            android:fontFamily="@font/assistant_regular"
+            android:maxLines="3"
+            android:text="@string/by"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvPrice"
+            android:fontFamily="@font/assistant_semibold"
+            android:maxLines="3"
+            android:paddingTop="@dimen/_3sdp"
+            android:text="@string/Rs"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingTop="@dimen/_3sdp"
+            android:text=""
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <RelativeLayout
+            android:id="@+id/viewIncludedTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDelete"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivPoint"
+            android:background="@drawable/transparent_round"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvIncludeTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Includes 10 tests"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tvShowAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/assistant_regular"
+                android:gravity="end"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/show_all"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/delete"
+            android:tint="@color/darkGray" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/viewIncludedTest"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/ivPoint"
+            android:background="@color/color_cccccc" />
+    </RelativeLayout>
+
+</layout>

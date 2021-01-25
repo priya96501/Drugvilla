@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute,ContentDescription,RtlSymmetry">
+
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/back_stroke">
+
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/brand1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvPack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivProduct"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:maxLines="2"
+            android:text="@string/pack_of_2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/MRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPack"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/MRP"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/tvMRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPack"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/MRP"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingStart="@dimen/_2sdp"
+            android:text="@string/dummy_price"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMRP"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/Rs"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMRP"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_toEndOf="@+id/rs"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingStart="@dimen/_3sdp"
+            android:text="@string/dummy_price"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/tvOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_below="@+id/tvPack"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@+id/tvMRP"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/_8_off"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAmount"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_red"
+            android:elevation="@dimen/_1sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingStart="@dimen/_12ssp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_12ssp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/buy_pack"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_9ssp" />
+
+    </RelativeLayout>
+
+</layout>
+

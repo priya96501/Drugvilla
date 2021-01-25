@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_2sdp"
+        tools:ignore="UnusedAttribute">
+
+
+        <RelativeLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/back_white"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etSearchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="@string/Search"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/lightBlack"
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="AutoFill,TextFields" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_search"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/colorBlack"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivBack"
+            android:fontFamily="@font/assistant_semibold"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivSecond"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/ivRight"
+            android:src="@drawable/bookmark"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ru.nikartm.support.ImageBadgeView
+            android:id="@+id/ivRight"
+            android:layout_width="@dimen/_21sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/cart"
+            android:visibility="gone"
+            app:ibv_badgeColor="@color/colorRed"
+            app:ibv_badgeLimitValue="false"
+            app:ibv_badgePadding="@dimen/_4sdp"
+            app:ibv_badgePosition="top_right"
+            app:ibv_badgeTextColor="@color/colorWhite"
+            app:ibv_badgeTextSize="@dimen/_10ssp"
+            app:ibv_roundBadge="true" />
+
+        <!-- <ImageView
+             android:id="@+id/ivRight"
+             android:layout_width="@dimen/_17sdp"
+             android:layout_height="@dimen/_22sdp"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:layout_marginEnd="@dimen/_7sdp"
+             android:src="@drawable/cart"
+             android:visibility="gone"
+             tools:ignore="ContentDescription" />-->
+
+        <TextView
+            android:id="@+id/tvClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/clear_all"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

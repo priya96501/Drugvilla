@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry,UnusedAttribute"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/llData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".85"
+                android:buttonTint="@color/colorAccent"
+                android:fontFamily="@font/assistant_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/title"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_10ssp"
+                />
+
+            <TextView
+                android:id="@+id/tvItemsCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".15"
+                android:fontFamily="@font/assistant_regular"
+                android:gravity="end"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/title"
+                android:textColor="@color/lightGray"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/llData"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/transparent_cccccc" />
+    </RelativeLayout>
+</layout>

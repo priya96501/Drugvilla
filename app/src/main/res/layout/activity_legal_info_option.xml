@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        tools:context=".ui.others.LegalInfoOption">
+
+        <include
+            android:id="@+id/menubar"
+            layout="@layout/toolbar" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/back_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:elevation="@dimen/_3sdp"
+            tools:ignore="UnusedAttribute">
+
+
+            <LinearLayout
+                android:id="@+id/llPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/legalinformation"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight=".8"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_weight=".1"
+                    android:padding="@dimen/_4sdp"
+                    android:rotation="270"
+                    android:src="@drawable/down_arrow"
+                    android:tint="@color/colorBlack"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/color_cccccc" />
+
+            <LinearLayout
+                android:id="@+id/llTermsConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/legalinformation"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight=".8"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/terms_conditions"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_weight=".1"
+                    android:padding="@dimen/_4sdp"
+                    android:rotation="270"
+                    android:src="@drawable/down_arrow"
+                    android:tint="@color/colorBlack"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

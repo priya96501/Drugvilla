@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvSortBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingStart="@dimen/_15sdp"
+            android:text="@string/sort_by"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:src="@drawable/cross"
+            tools:ignore="ContentDescription" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tvSortBy"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:background="@color/color_cccccc" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSortingType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view" />
+
+
+    </RelativeLayout>
+
+</layout>

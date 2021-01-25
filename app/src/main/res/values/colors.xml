@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED3237</color>
+    <color name="colorPrimaryDark">#ED3237</color>
+    <color name="colorAccent">#ED3237</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#D22215</color>D84643
+    <color name="colorYellow">#FFB123</color>
+    <color name="darkGray">#808080</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="light_silver">#FAFAFA</color>
+    <color name="color_cccccc">#CCCCCC</color>
+    <color name="transparent_cccccc">#b4CCCCCC</color>
+    <color name="transparent">#F8F8F8</color>
+    <color name="lightGray">#96989A</color>
+    <color name="lightBlack">#595859</color>
+    <color name="gradient_centre">#EC6D58</color>
+    <color name="gradient_top">#F5916D</color>
+    <color name="gradient_bottom">#E75037</color>
+    <color name="dark_green">#008000</color>
+    <color name="error_color">#ff1717</color>
+    <color name="sky_blue">#B2EAF9</color>
+    <color name="light_pink">#E67171</color>
+    <color name="timestamp">#4285f4</color>
+
+    <array name="array_dot_active">
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/color_cccccc</item>
+        <item>@color/color_cccccc</item>
+        <item>@color/color_cccccc</item>
+
+    </array>
+
+
+
+    <color name="green">#b40B6623</color>
+    <color name="transparent_blue">#F4F7FB</color>
+    <color name="transparent_red">#b4FFC0CB</color>
+    <color name="light_green">#00B089</color>
+    <color name="darkBlue">#2F4563</color>
+    <color name="color_F0F1F1">#b4F0F1F1</color>
+    <color name="_red">#FE8484</color>
+    <color name="orange">#F5916D</color>
+    <color name="light_orange">#FFEEE4</color>
+    <color name="color_accent_transparent">#b4ED3237</color>
+    <color name="color_mint">#F2FFF8</color>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <TextView
+        android:id="@+id/reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:text="@string/reason_for_cancellation"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_13ssp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/cross"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/reason"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@color/color_cccccc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvreasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+    <TextView
+        android:paddingBottom="@dimen/_9sdp"
+        android:paddingTop="@dimen/_9sdp"
+        android:id="@+id/btnCancelOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvreasons"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/button_red"
+        android:fontFamily="@font/assistant_semibold"
+        android:text="@string/cancel_order"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_11ssp" />
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.labs.ScheduleDetail">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/menubar"
+                layout="@layout/toolbar" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/menubar"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/arsenal_bold"
+                        android:text="@string/select_date_time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/a_person_will_visit_to_collect_samples_at_selected_slot"
+                        android:textColor="@color/darkGray"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/llSelectDate"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="Select Date  "
+                        android:paddingStart="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="RtlSymmetry,UnusedAttribute" />
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:src="@drawable/appointment"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/llSelectedDateData"
+                        android:layout_width="wrap_content"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvSelectedDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/day"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvSelectedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/date"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_11ssp" />
+
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDate"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:scrollbarSize="@dimen/_2sdp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="horizontal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="Select Time Slot"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTimeSlot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp" />
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/save_continue"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

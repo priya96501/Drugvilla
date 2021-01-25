@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/leave_a_comment"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".48"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/lightGray"
+                        app:errorEnabled="true"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/assistant_regular"
+                            android:hint="@string/Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLength="32"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/silver"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvNameError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text=""
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_9ssp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".05" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".48"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/lightGray"
+                        app:errorEnabled="true"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/assistant_regular"
+                            android:hint="@string/email_id"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="32"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/silver"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvEmailError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text=""
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_9ssp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColorHint="@color/lightGray"
+                app:errorEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_regular"
+                    android:hint="@string/comment"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/silver"
+                    android:textSize="@dimen/_11ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvCommentError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="-20dp"
+                android:fontFamily="@font/assistant_regular"
+                android:text=""
+                android:textColor="@color/error_color"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/btnPostComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="@string/post_comment"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

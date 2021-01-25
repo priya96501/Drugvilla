@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent"
+        tools:context=".ui.startAndDashboard.Welcome">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_above="@+id/createAccount"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+        <Button
+            android:id="@+id/createAccount"
+            android:layout_above="@+id/tvAlreadyUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:background="@drawable/button_red"
+            android:text="@string/sign_up"
+            android:paddingLeft="@dimen/_40sdp"
+            android:paddingRight="@dimen/_40sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tvAlreadyUser"
+            android:layout_above="@+id/tvTermsConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/have_an_account_login"
+            android:fontFamily="@font/assistant_regular"
+            android:textColor="@color/lightGray"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvTermsConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:padding="@dimen/_3sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/terms_and_conditions"
+            android:fontFamily="@font/assistant_regular"
+            android:textColor="@color/silver"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_8ssp" />
+
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@null"
+            android:text="@string/skip"
+            android:textAllCaps="true"
+            android:fontFamily="@font/assistant_semibold"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+</layout>

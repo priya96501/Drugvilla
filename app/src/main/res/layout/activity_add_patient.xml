@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute,ContentDescription,RtlSymmetry">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.patient.AddPatient">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/menubar"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/menubar"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/arsenal_bold"
+                        android:text="@string/patient_details"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_18ssp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/viewIncludedTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/transparent_round"
+                        android:elevation="@dimen/_1sdp"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/information" />
+
+                        <TextView
+                            android:id="@+id/tvIncludeTest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/assistant_regular"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:text="@string/these_details_will_appear_on_the_final_test_report"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/please_provide_following_patient_s_details"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/llPatientDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/darkGray"
+                            app:boxStrokeColor="@color/darkGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPatient_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/patient_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/tvNameError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:weightSum="1">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:layout_weight=".3"
+                                android:gravity="bottom"
+                                android:textColorHint="@color/darkGray"
+                                app:boxStrokeColor="@color/darkGray"
+                                app:boxStrokeWidth="0.1dp"
+                                app:errorEnabled="true"
+                                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:fontFamily="@font/assistant_regular"
+                                    android:gravity="bottom"
+                                    android:hint="@string/age"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLength="3"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textColorHint="@color/silver"
+                                    android:textSize="@dimen/_10ssp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".1" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".6"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/gender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:text="@string/gender"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_11ssp" />
+
+                                <LinearLayout
+                                    android:id="@+id/llSelectGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/gender"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="bottom"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tvMale"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight=".45"
+                                        android:background="@drawable/back_stroke"
+                                        android:fontFamily="@font/assistant_semibold"
+                                        android:gravity="center"
+                                        android:paddingTop="@dimen/_7sdp"
+                                        android:paddingBottom="@dimen/_7sdp"
+                                        android:text="@string/male"
+                                        android:textColor="@color/lightGray"
+                                        android:textSize="@dimen/_11ssp"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".1" />
+
+
+                                    <TextView
+                                        android:id="@+id/tvFemale"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight=".45"
+                                        android:background="@drawable/back_stroke"
+                                        android:fontFamily="@font/assistant_semibold"
+                                        android:gravity="center"
+                                        android:paddingTop="@dimen/_7sdp"
+                                        android:paddingBottom="@dimen/_7sdp"
+                                        android:text="@string/female"
+                                        android:textColor="@color/lightGray"
+                                        android:textSize="@dimen/_11ssp" />
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tvGenderError"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/llSelectGender"
+                                    android:fontFamily="@font/assistant_regular"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:text=""
+                                    android:textColor="@color/error_color"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:visibility="gone" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvAgeError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textColorHint="@color/darkGray"
+                            app:boxStrokeColor="@color/darkGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/mobile"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/tvMobileError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textColorHint="@color/darkGray"
+                            app:boxStrokeColor="@color/darkGray"
+                            app:boxStrokeWidth="0.5dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/email"
+                                android:imeOptions="actionDone"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/tvEmailError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_3sdp"
+                            android:text="@string/your_test_report_will_be_sent_to_this_email_id"
+                            android:textColor="@color/lightGray"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/save_continue"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

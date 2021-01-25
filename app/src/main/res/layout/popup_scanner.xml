@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_white"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/_160sdp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/scanner" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="To use Mobile-to-Web cross login \nsan the QR Code."
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+        <TextView
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_2sdp"
+            android:layout_margin="@dimen/_30sdp"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/ok"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.patient.AddPatient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            tools:context=".ui.others.ContactUs">
+
+            <include
+                android:id="@+id/menuBar"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:src="@drawable/contactus" />
+
+
+                    <LinearLayout
+                        android:id="@+id/rlForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/back_white"
+                        android:elevation="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/arsenal_bold"
+                            android:text="Add New Medicine"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_18ssp" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/please_feel_free_to_contact_us_if_you_have_any_further_questions_or_concerns"
+                            android:textColor="@color/lightGray"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/medName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMedName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="Medicine/Product Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvMedNameError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/brandName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.5dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etBrandName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="Brand Name"
+                                android:imeOptions="actionDone"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvBrandNameError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/your_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvNameError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.5dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/your_email"
+                                android:imeOptions="actionDone"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="32"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvEmailError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/your_mobile_number"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvMobileError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="-20dp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text=""
+                            android:textColor="@color/error_color"
+                            android:textSize="@dimen/_9ssp"
+                            android:visibility="gone" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textColorHint="@color/lightGray"
+                            app:boxStrokeColor="@color/lightGray"
+                            app:boxStrokeWidth="0.1dp"
+                            app:errorEnabled="true"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/assistant_regular"
+                                android:hint="@string/message"
+                                android:imeOptions="actionDone"
+                                android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                                android:textColor="@color/colorBlack"
+                                android:textColorHint="@color/silver"
+                                android:textSize="@dimen/_10ssp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvUpload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text="Upload Image"
+                            android:textColor="@color/lightGray"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="@dimen/_23sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_23sdp"
+                            android:background="@color/lightGray"
+                            android:layout_height="1dp"/>
+
+
+                        <TextView
+                            android:id="@+id/btnContinue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:background="@drawable/button_red"
+                            android:fontFamily="@font/assistant_semibold"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_7sdp"
+                            android:text="@string/submit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_11ssp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

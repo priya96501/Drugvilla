@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,RtlSymmetry,UnusedAttribute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        tools:context=".ui.user.Wallet">
+
+        <include
+            android:id="@+id/menubar"
+            layout="@layout/toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/ic_half_back"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivWallet"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_wallet2" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/ivWallet"
+                android:fontFamily="@font/assistant_semibold"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/drugvilla_coins"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading"
+                android:layout_toEndOf="@+id/ivWallet"
+                android:fontFamily="@font/assistant_semibold"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/dummy_price"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_16ssp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/back_white"
+            android:elevation="@dimen/_3sdp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/llMyCoins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_transaction"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="@string/transactions"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.7dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/color_cccccc" />
+
+            <LinearLayout
+                android:id="@+id/llReferEarn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_refer"
+                    android:tint="@color/colorRed"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="@string/refer_earn"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/referEarn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvRefer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/instant_rewards"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/tvReferDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvRefer"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:text="@string/invite_your_friends_to_increase_your_wallet_balance"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                    <ImageView
+                        android:id="@+id/ivRefer"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_below="@+id/tvReferDesc"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/gift" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivRefer"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/back_gray"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:src="@drawable/offer"
+                            android:tint="@color/colorAccent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/assistant_semibold"
+                            android:text="@string/refer_earn"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/assistant_regular"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:text="@string/refer_drugvilla_to_your_friends_and_get_extra_5_saving_on_your_next_order"
+                            android:textColor="@color/lightGray"
+                            android:textSize="@dimen/_9ssp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <include
+                    android:id="@+id/llNoTransactions"
+                    layout="@layout/empty_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTransactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

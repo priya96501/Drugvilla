@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,RtlSymmetry,UnusedAttribute">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        tools:context=".ui.prescription.Upload">
+
+        <include
+            android:id="@+id/menubar"
+            layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/menubar"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/llImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+
+                        <ImageView
+                            android:id="@+id/selectedImage"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_140sdp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@color/transparent" />
+
+                        <ImageView
+                            android:id="@+id/selectedImage2"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_140sdp"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@+id/selectedImage"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@color/transparent" />
+
+                        <ImageView
+                            android:id="@+id/selectedImage3"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_140sdp"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@+id/selectedImage2"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@color/transparent" />
+
+                        <ImageView
+                            android:id="@+id/cross"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/cross" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ivupload"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/upload"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSelectedPrescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llImages"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:elevation="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    tools:ignore="UnusedAttribute">
+
+                    <LinearLayout
+                        android:id="@+id/llGalery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+
+                        android:layout_weight=".49"
+                        android:background="@drawable/left_round_white"
+                        android:elevation="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_6sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:src="@drawable/gallery"
+                            android:tint="@color/colorAccent"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:fontFamily="@font/assistant_semibold"
+                            android:gravity="center"
+                            android:text="@string/gallery"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".02" />
+
+                    <LinearLayout
+                        android:id="@+id/llCamera"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_weight=".49"
+                        android:background="@drawable/left_round_white"
+                        android:elevation="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_6sdp"
+                        android:rotation="180">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/assistant_semibold"
+                            android:gravity="center"
+                            android:rotation="180"
+                            android:text="@string/camera"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:rotation="180"
+                            android:src="@mipmap/camera"
+                            android:tint="@color/colorAccent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMyPrescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llOption"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/round_white"
+                    android:elevation="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_6sdp"
+                    android:weightSum="1"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/myorder"
+                        android:tint="@color/colorAccent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:gravity="center"
+                        android:text="@string/my_prescription"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llPrescriptionGuide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llMyPrescription"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:id="@+id/tvHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/ivExpand"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/valid_prescription_guide"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvHeading"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/ivExpand"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text="@string/image_should_contain_following_points"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivExpand"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="@color/colorAccent"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivPrescriptionDemo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_below="@+id/tvDesc"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/valid_prescription"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llcallingDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llPrescriptionGuide"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:background="@drawable/back_stroke"
+                    android:padding="@dimen/_8sdp"
+                   >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivDoc"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/doc1"
+                        app:civ_border_color="@color/lightGray"
+                        app:civ_border_width="@dimen/_1sdp" />
+
+                    <TextView
+                        android:id="@+id/tvDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/ivDoc"
+                        android:fontFamily="@font/assistant_regular"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/our_pharmacist_will_call_you_to_confirm_medicines_from_your_prescription_by"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="@dimen/_9ssp" />
+
+                    <TextView
+                        android:id="@+id/tvTimings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDetail"
+                        android:layout_toEndOf="@+id/ivDoc"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/_3_45_pm_today"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:text="@string/upload_prescription"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <LinearLayout
+            android:id="@+id/llBookLabTestSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/our_certified_agent_will_call_you_shortly_to_confirm_your_test"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/btnSelectLab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:text="@string/select_lab"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

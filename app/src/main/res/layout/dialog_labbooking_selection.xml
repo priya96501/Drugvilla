@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/chemical"
+            tools:ignore="ContentDescription" />
+
+        <RadioGroup
+            android:id="@+id/Rg_Options"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_sample"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/assistant_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/sample_collection_from_home"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_11ssp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="@color/color_cccccc" />
+
+            <RadioButton
+                android:id="@+id/rb_visit_lab"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/assistant_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/visit_lab"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_11ssp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/btnSelectOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:text="@string/select"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</layout>

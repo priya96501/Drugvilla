@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "565328595017",
+    "firebase_url": "https://drugvilla-64520.firebaseio.com",
+    "project_id": "drugvilla-64520",
+    "storage_bucket": "drugvilla-64520.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565328595017:android:9491ac44c6c2980d331798",
+        "android_client_info": {
+          "package_name": "com.drugvilla.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565328595017-dt6ktqf0iau83oevjkbql3g3t5bp05le.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drugvilla.in",
+            "certificate_hash": "0720cee8b1fcac39f8b63d544ec21ef85f5d5421"
+          }
+        },
+        {
+          "client_id": "565328595017-tnhs68osnbhp1tn9cm3heruqohmfcq8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drugvilla.in",
+            "certificate_hash": "95833a516431eacbb138285b7f230fdf4deca67c"
+          }
+        },
+        {
+          "client_id": "565328595017-qcrdqt9i330kh6sni1bblmr44nnnl7m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS0ZBaI1NQUaa6hWFm4CLOzpryCJQQA-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565328595017-qcrdqt9i330kh6sni1bblmr44nnnl7m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

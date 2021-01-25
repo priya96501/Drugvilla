@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedAttribute,ContentDescription,RtlSymmetry">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.reminders.AddReminder">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <include
+                android:id="@+id/menubar"
+                layout="@layout/toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menubar"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessLeaf">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/reminder_title"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:textColorHint="@color/darkGray"
+                        app:boxStrokeColor="@color/darkGray"
+                        app:boxStrokeWidth="0.1dp"
+                        app:errorEnabled="true"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/medicine_name"
+                            android:imeOptions="actionDone"
+                            android:fontFamily="@font/assistant_regular"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/silver"
+                            android:textSize="@dimen/_11ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/tvNameError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_23sdp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:text=""
+                        android:textColor="@color/error_color"
+                        android:textSize="@dimen/_9ssp"
+                        android:visibility="gone" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/reminder_category"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:id="@+id/llMorning"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight=".33"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/iv1"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/morningunselected"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/tvMorning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/assistant_semibold"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="@string/morning"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/tvMorningTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/assistant_regular"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_weight=".002"
+                            android:background="@color/color_cccccc" />
+
+                        <LinearLayout
+                            android:id="@+id/llAfternoon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight=".33"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/iv2"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/dayunselected"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/tvDay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/assistant_semibold"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="@string/afternoon"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/tvDayTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/assistant_regular"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_weight=".002"
+                            android:background="@color/color_cccccc" />
+
+                        <LinearLayout
+                            android:id="@+id/llEvening"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight=".33"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/iv3"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/nightunselected"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/tvNight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/assistant_semibold"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text="@string/evening"
+                                android:textColor="@color/lightBlack"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/tvNightTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/assistant_regular"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="3"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <ImageView
+                            android:id="@+id/ivCross1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/cross"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivCross2"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/cross"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/ivCross3"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/cross"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/reminder_duration"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_18sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_daily"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".5"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/everyday"
+                            android:fontFamily="@font/assistant_regular"
+                            android:textColor="@color/lightBlack"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:background="@color/color_cccccc" />
+
+                        <RadioButton
+                            android:id="@+id/rb_weekly"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".5"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/weekly"
+                            android:fontFamily="@font/assistant_regular"
+                            android:textColor="@color/lightBlack"
+                            android:textSize="@dimen/_11ssp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llWeekDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:visibility="gone"
+                            android:weightSum="7"
+                            tools:ignore="DisableBaselineAlignment">
+
+                            <LinearLayout
+
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="SUNDAY" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/sun"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="MONDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/mon"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="TUESDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/tue"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="WEDNESDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/wed"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="THURSDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/thu"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="FRIDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/fri"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <CheckBox
+                                    android:id="@+id/day7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:tag="SATURDAY" />
+
+                                <TextView
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/assistant_semibold"
+                                    android:gravity="center"
+                                    android:text="@string/sat"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/lightGray"
+                                    android:textSize="@dimen/_11ssp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@color/transparent"
+                        android:elevation="@dimen/_2sdp"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/reminder_start_date"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/llDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_22sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_18sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_weight=".9"
+                            android:fontFamily="@font/assistant_regular"
+                            android:text="@string/select_date"
+                            android:textColor="@color/lightGray"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_weight=".1"
+                            android:src="@drawable/appointment"
+                            android:tint="@color/colorAccent" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@color/color_cccccc" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/save_continue"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

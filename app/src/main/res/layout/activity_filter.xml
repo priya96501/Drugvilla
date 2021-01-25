@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".ui.product.FilterActivity">
+
+        <include
+            android:id="@+id/menuBar"
+            layout="@layout/toolbar" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/menuBar"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:background="@color/transparent" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:id="@+id/llPriceRange"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_weight=".65">
+
+                <TextView
+                    android:id="@+id/selectedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:gravity="center"
+                    android:text="@string/selected_price_range"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/rs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedPrice"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:text="@string/Rs"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvStartRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedPrice"
+                    android:layout_toEndOf="@+id/rs1"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/dummy_price"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedPrice"
+                    android:layout_toEndOf="@+id/tvStartRange"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/hyphon"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/rs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedPrice"
+                    android:layout_toEndOf="@+id/minus"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/Rs"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/tvEndRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/selectedPrice"
+                    android:layout_toEndOf="@+id/rs2"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/dummy_price"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <TextView
+                    android:id="@+id/tvTotalItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rs1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:gravity="center"
+                    android:text="@string/_1543_products_found"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterType"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight=".65"
+                android:background="@color/colorWhite"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            android:elevation="@dimen/_5sdp"
+            android:orientation="vertical"
+            tools:ignore="UnusedAttribute">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/transparent_cccccc" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_9sdp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvClose"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/close"
+                    android:textAllCaps="true"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+
+                    android:background="@color/transparent_cccccc" />
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/arsenal_bold"
+                    android:gravity="center"
+                    android:text="@string/apply"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

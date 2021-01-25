@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingBottom="@dimen/_13sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvFilterType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".95"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/title"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tvFilterTypeCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/assistant_regular"
+                android:text="2"
+                android:gravity="end"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/transparent_cccccc" />
+
+    </LinearLayout>
+</layout>

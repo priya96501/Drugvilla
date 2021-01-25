@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/edit_profile"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/cross"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEditProfile"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:textColorHint="@color/darkGray"
+            app:boxStrokeColor="@color/darkGray"
+            app:boxStrokeWidth="0.1dp"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="@string/f_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvfnameError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="@dimen/_33sdp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfnameError"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:textColorHint="@color/darkGray"
+            app:boxStrokeColor="@color/darkGray"
+            app:boxStrokeWidth="0.1dp"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="@string/l_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvLnameError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l_name"
+            android:layout_marginStart="@dimen/_33sdp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLnameError"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:textColorHint="@color/darkGray"
+            app:boxStrokeColor="@color/darkGray"
+            app:boxStrokeWidth="0.5dp"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="@string/email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvEmailError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginStart="@dimen/_33sdp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEmailError"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:textColorHint="@color/darkGray"
+            app:boxStrokeColor="@color/darkGray"
+            app:boxStrokeWidth="0.1dp"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="@string/mobile"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/_11ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvMobileError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobile"
+            android:layout_marginStart="@dimen/_33sdp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMobileError"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/update_profile"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_11ssp" />
+
+    </RelativeLayout>
+
+</layout>

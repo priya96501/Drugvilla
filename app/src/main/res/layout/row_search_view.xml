@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:src="@drawable/pills"
+            android:tint="@color/colorRed"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/rs"
+            android:layout_toEndOf="@+id/ivType"
+            android:fontFamily="@font/assistant_regular"
+            android:gravity="start"
+            android:text="@string/dummy_med_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvComposition"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivType"
+            android:fontFamily="@font/assistant_regular"
+            android:gravity="start"
+            android:text="@string/bottle_of_10mg"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_toStartOf="@+id/tvAmountLocation"
+            android:fontFamily="@font/assistant_regular"
+            android:text="@string/Rs"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvAmountLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_regular"
+            android:paddingStart="@dimen/_3sdp"
+            android:text="@string/dummy_price"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tvComposition"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@color/color_cccccc" />
+
+    </RelativeLayout>
+
+</layout>

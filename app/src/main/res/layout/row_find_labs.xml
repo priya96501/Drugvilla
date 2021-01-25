@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/llLabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/back_white"
+        android:elevation="@dimen/_2sdp">
+
+        <ImageView
+            android:id="@+id/ivLab"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/back_stroke"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lab3"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/llHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivLab"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_weight=".87"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/lab_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp" />
+
+            <LinearLayout
+                android:id="@+id/llrating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".13"
+                android:background="@drawable/round_green"
+                android:gravity="center"
+                android:paddingStart="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/tvLabRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/dummy_rating"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_10ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:src="@drawable/ic_star"
+                    android:tint="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLab"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/ivLab"
+            tools:ignore="UseCompoundDrawables">
+
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_address"
+                android:tint="@color/lightGray"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/location"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCertified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llLocation"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/ivLab">
+
+
+            <ImageView
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_certified"
+                android:tint="@color/lightGray"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvCertifiedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="ISo,CAP,NABL"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llUsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCertified"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivLab">
+
+
+            <ImageView
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/account"
+                android:tint="@color/lightGray"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvLabUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/assistant_regular"
+                android:text="850 lab tests booked this week"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
+

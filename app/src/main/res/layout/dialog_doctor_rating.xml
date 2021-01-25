@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<LinearLayout
+    android:id="@+id/llRootDialog"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="UselessParent">
+
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/arsenal_bold"
+            android:text="@string/rate_your_experience"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14ssp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_regular"
+            android:text="@string/tell_us_about_your_experience_with_the_doctor"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColorHint="@color/lightGray"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_regular"
+                android:hint="@string/review"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/_10ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvReviewError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnShareExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/button_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/submit"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_11ssp" />
+
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

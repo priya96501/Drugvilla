@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/select"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_cccccc" />
+
+        <LinearLayout
+            android:id="@+id/llUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/myorder"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".8"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/upload_new_prescription"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:padding="@dimen/_4sdp"
+                android:rotation="270"
+                android:src="@drawable/down_arrow"
+                android:tint="@color/colorBlack"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_cccccc" />
+
+        <LinearLayout
+            android:id="@+id/llMyPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/myorder"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".8"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/my_prescriptions"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:padding="@dimen/_4sdp"
+                android:rotation="270"
+                android:src="@drawable/down_arrow"
+                android:tint="@color/colorBlack"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

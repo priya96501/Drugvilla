@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/llPackage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/back_white"
+        android:elevation="@dimen/_2sdp"
+        tools:ignore="UnusedAttribute">
+
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_all_labs"
+            android:visibility="invisible"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/rs"
+            android:layout_toEndOf="@+id/ivHead"
+            android:fontFamily="@font/assistant_semibold"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:text="@string/title"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPatientName"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivHead"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingTop="@dimen/_3sdp"
+            android:text="@string/processing"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toStartOf="@+id/tvPrice"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/Rs"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:paddingStart="@dimen/_3sdp"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/llData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOrderStatus"
+            android:layout_toEndOf="@+id/ivHead"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llMyOrderData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/order_id_08987ytv8697785665"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tvOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/dummy_date_time"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llMyLabTestData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:text="@string/time_slot"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/dummy_date"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_regular"
+                    android:text="@string/dummy_time"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/_11ssp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btnViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llData"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/border_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:text="@string/view_details"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_9ssp" />
+    </RelativeLayout>
+
+</layout>

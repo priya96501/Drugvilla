@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tvReason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight=".9"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/cash_on_delivery"
+                android:textColor="@color/lightGray"
+                android:textSize="@dimen/_11ssp" />
+
+
+            <CheckBox
+                android:id="@+id/check"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSelected"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_weight=".1"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/ic_bullet_point"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_cccccc" />
+    </LinearLayout>
+
+</layout>
+

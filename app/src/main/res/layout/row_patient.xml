@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RelativeOverlap,ContentDescription,UnusedAttribute">
+
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@drawable/back_stroke">
+
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:id="@+id/ivSelected"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:src="@drawable/ic_bullet_point"
+            tools:ignore="ContentDescription" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:buttonTint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPatientName"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_regular"
+            android:gravity="center"
+            android:text="@string/age"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAge"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/assistant_regular"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEmail"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/assistant_regular"
+            android:gravity="center"
+            android:text="@string/mobile"
+            android:textColor="@color/lightGray"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_below="@+id/tvNumber"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:src="@drawable/delete"
+            android:tint="@color/darkGray" />
+
+        <TextView
+            android:id="@+id/tvEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNumber"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/edit"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/_11ssp" />
+
+    </RelativeLayout>
+
+
+</layout>
+

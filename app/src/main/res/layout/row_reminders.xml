@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RelativeOverlap,ContentDescription,RtlSymmetry,UnusedAttribute,UseCompoundDrawables">
+
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ivMed"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/pills" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/ivMed"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:text="@string/reminder_title"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ivOptions"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                android:tint="@color/lightGray"
+                tools:ignore="ContentDescription" />
+
+
+            <LinearLayout
+                android:id="@+id/llDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="DisableBaselineAlignment">
+
+
+                <LinearLayout
+                    android:id="@+id/llMorning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight=".33"
+                    android:background="@drawable/back_white"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp"
+                    tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/morningunselected"
+                        android:tint="@color/lightGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvMorning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/morning"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvMorningTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAfternoon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight=".33"
+                    android:background="@drawable/back_white"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dayunselected"
+                        android:tint="@color/lightGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/afternoon"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_11ssp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvDayTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEvening"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight=".33"
+                    android:background="@drawable/back_white"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nightunselected"
+                        android:tint="@color/lightGray"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvNight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/evening"
+                        android:textColor="@color/lightGray"
+                        android:textSize="@dimen/_11ssp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvNightTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/assistant_regular"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/color_cccccc" />
+
+
+    </LinearLayout>
+</layout>

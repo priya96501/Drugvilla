@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/back_white"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/assistant_semibold"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Price Breakup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvTestSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHeading"
+                android:layout_gravity="center"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="1 Test Selected"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tvTestSelected"
+                android:background="@color/color_cccccc" />
+
+            <TextView
+                android:id="@+id/tvTestName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_gravity="center"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="Glycosylated Hemoglobin"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTestName"
+                android:layout_gravity="center"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="20% off"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/BestPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOff"
+                android:layout_gravity="center"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="Best Price"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <TextView
+                android:id="@+id/tvOffPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTestName"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/assistant_regular"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/rs"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvBestPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOff"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/assistant_semibold"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/rs"
+                android:textColor="@color/lightBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/BestPrice"
+                android:background="@color/color_cccccc" />
+
+            <TextView
+                android:id="@+id/btnOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="@drawable/button_red"
+                android:fontFamily="@font/assistant_semibold"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/ok"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

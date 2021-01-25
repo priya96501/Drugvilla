@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:background="@color/colorWhite"
+            android:elevation="@dimen/_2sdp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/logo_white"
+                android:tint="@color/colorAccent"
+                tools:ignore="ContentDescription" />
+
+         <!--   <RelativeLayout
+                android:id="@+id/llScanner"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivScan"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/scancode"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:layout_below="@+id/ivScan"
+                    android:text="Scan QR Code"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_toRightOf="@+id/ivScan"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:rotation="270"
+                    android:src="@drawable/down_arrow"
+                    android:tint="@color/colorBlack" />
+
+            </RelativeLayout>-->
+
+            <LinearLayout
+                android:id="@+id/llScanner"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/ivArrow"
+                android:orientation="vertical"
+                tools:ignore="ObsoleteLayoutParam,UseCompoundDrawables">
+
+
+                <ImageView
+                    android:id="@+id/ivScan"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/scancode"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Scan QR Code"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_9ssp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:rotation="270"
+                android:src="@drawable/down_arrow"
+                android:tint="@color/colorBlack" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightGray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/llMyOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/myorder"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/my_orders"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".002"
+                android:background="@color/lightGray" />
+
+            <LinearLayout
+                android:id="@+id/llMyLabTest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/labs"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/my_lab_tests"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".002"
+                android:background="@color/lightGray" />
+
+            <LinearLayout
+                android:id="@+id/llMyAppointments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/appointment"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:gravity="center"
+                    android:text="@string/my_appointment"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightGray" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/llWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/wallet"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/wallet"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReferEarn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/refer"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/refer_earn"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/account"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/my_account"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/offer"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/offers"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/doctors"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <LinearLayout
+                    android:id="@+id/llFindDoctors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/finddoctor"
+                        android:tint="@color/colorAccent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/find_doctors"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llConsultDoctors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/consult"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/consult_doctors"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/labs"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <LinearLayout
+                    android:id="@+id/llBookLabTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/labs"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/book_lab_tests"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/medicines"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:id="@+id/llReminders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/reminder"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/reminders"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/pills"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/order_medicines_via_rx"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/blogs"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:id="@+id/llViewAllBlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/article"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/articles"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/others"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RtlSymmetry" />
+
+                <LinearLayout
+                    android:id="@+id/llFAQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/faq"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/faq"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLegalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/legalinformation"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/legal_information"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llContactUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/contact_us"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/contact_us"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/information"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/about_us"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/logout"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/logout"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_weight=".2"
+                        android:src="@drawable/account"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:fontFamily="@font/assistant_semibold"
+                        android:text="@string/login_signup"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

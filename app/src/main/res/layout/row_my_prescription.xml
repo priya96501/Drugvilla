@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry,UnusedAttribute,ContentDescription,UseCompoundDrawables">
+
+    <RelativeLayout
+        android:id="@+id/llRoot"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/back_stroke">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivPrescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rx" />
+            <ImageView
+                android:id="@+id/ivCross"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/cross"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:id="@+id/ivSelected"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/bullet_point_red"
+                tools:ignore="ContentDescription" />
+
+            <CheckBox
+                android:id="@+id/ivCheck"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <!--<ImageView
+            android:id="@+id/ivPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_95sdp"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/rx" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPrescription"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            android:weightSum="1">
+
+            <CheckBox
+                android:id="@+id/ivCheck"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".3"
+                android:buttonTint="@color/colorBlack"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_5sdp"
+                android:rotation="180" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="start"
+                android:paddingStart="@dimen/_5sdp"
+                android:rotation="180"
+                android:text="@string/select"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </LinearLayout>-->
+
+    </RelativeLayout>
+</layout>

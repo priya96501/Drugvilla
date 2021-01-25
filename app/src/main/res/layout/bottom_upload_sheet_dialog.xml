@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+
+        <TextView
+            android:id="@+id/tvHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/help"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/cross"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHelp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/prescription_for_healthy_life_right_choice"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10ssp" />
+
+        <ImageView
+            android:id="@+id/ivPrescriptionDemo"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@+id/tvHeading"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/valid_prescription"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/ivHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPrescriptionDemo"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/assistant_semibold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/follow_3_easy_steps_to_order_your_medicines"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <LinearLayout
+            android:id="@+id/llStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivHeading2"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_weight=".3"
+                android:src="@drawable/one"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/upload_valid_prescription"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llStep1"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_weight=".3"
+                android:src="@drawable/two"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/receive_confirmation_call"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llStep3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llStep2"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_weight=".3"
+                android:src="@drawable/three"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".7"
+                android:fontFamily="@font/assistant_regular"
+                android:text="@string/delivery_at_doorstep"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llStep3"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/border_red"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/ok"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_10ssp" />
+
+
+    </RelativeLayout>
+</layout>

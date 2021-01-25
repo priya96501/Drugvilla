@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription,RtlSymmetry,UnusedAttribute">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center"
+        android:padding="@dimen/_9sdp">
+
+        <ImageView
+            android:id="@+id/ivSortingType"
+            android:layout_weight=".1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/sort1"
+            android:tint="@color/color_cccccc" />
+
+        <TextView
+            android:layout_weight=".9"
+            android:id="@+id/tvSortingType"
+            android:layout_width="0dp"
+            android:paddingStart="@dimen/_3sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_regular"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12ssp" />
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_weight=".1"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:buttonTint="@color/colorAccent"
+            android:gravity="center|end"
+           />
+
+    </LinearLayout>
+</layout>

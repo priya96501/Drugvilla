@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.drugvilla.in"
+    tools:ignore="LockedOrientationActivity">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity
+            android:name=".ui.startAndDashboard.Dashboard"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.Dummy"
+            android:screenOrientation="portrait">
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".ui.blog.CategoryWiseArticle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.SelectLab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.PackageDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ChatBot"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.offer.OfferDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.offer.Offer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.MedicineDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.membership.Membership"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.AllProductCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.orderDetail.OrderDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.OrderConfirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.ScheduleDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.patient.SelectPatient"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.patient.AddPatient"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.labs.LabDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.TestDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductsListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.ListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.reminders.AddReminder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.user.Wallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.blog.ArticleDescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.others.LegalInfoOption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.others.Redirect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.prescription.MyPrescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.blog.AllBlogs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctors.BookAppointment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.doctors.AppointmentDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctors.DoctorListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctors.DoctorProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.doctors.DoctorCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.others.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.authentication.ChangePassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.order.Cart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.reminders.Reminders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.Wishlist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.MyOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.Profile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.user.RefferEarn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.address.SelectAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.address.AddAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.prescription.Upload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.authentication.ForgetPassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.authentication.VerifyOtp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.authentication.Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.authentication.Signup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.authentication.ResetPassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.startAndDashboard.Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.OrderReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.PaymentSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.labs.LabDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.others.ContactUs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.startAndDashboard.Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.startAndDashboard.Splash"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <!--  <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>-->
+        </activity>
+        <activity android:name=".imageutil.CropImage" />
+
+        <service
+            android:name=".fcm.FirebaseToken"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm.MyMessagingService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

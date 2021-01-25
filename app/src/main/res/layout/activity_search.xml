@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        tools:context=".ui.others.SearchActivity">
+
+        <include
+            android:id="@+id/menubar"
+            layout="@layout/toolbar" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_weight=".1"
+                android:paddingTop="@dimen/_3sdp"
+                android:src="@drawable/ic_search"
+                android:tint="@color/color_cccccc"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/etSearchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".9"
+                android:background="@null"
+                android:focusable="true"
+                android:hint=""
+                android:fontFamily="@font/assistant_regular"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="Autofill,LabelFor" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightGray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/empty_page" />
+
+    </LinearLayout>
+</layout>
